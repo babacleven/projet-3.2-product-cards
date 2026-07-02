@@ -1,0 +1,538 @@
+/* ============================================================
+   TechStore — Cartes Produits (Style Amazon / Jumia)
+   Palette : fond #e9ecef, blanc #fff, bleu #2563eb,
+             or #f59e0b, rouge #dc2626, vert #16a34a
+   Espacement base : 8px
+   ============================================================ */
+
+/* --- RESET & BASE ----------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e293b;
+  background: #e9ecef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- TOPBAR Amazon / Jumia style --------------------------- */
+.topbar {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 24px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #facc15;
+  flex-shrink: 0;
+}
+
+.topbar nav ul {
+  display: flex;
+  gap: 4px;
+}
+
+.topbar nav a {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  cursor: pointer;
+}
+
+.topbar nav a:hover {
+  background: #1e293b;
+  color: #facc15;
+}
+
+.topbar-cart {
+  font-size: 1.35rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.topbar-cart:hover {
+  background: #1e293b;
+}
+
+/* --- CATALOGUE LAYOUT -------------------------------------- */
+main {
+  flex: 1;
+}
+
+.catalogue {
+  padding: 40px 24px;
+}
+
+.catalogue-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.catalogue h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.catalogue-sub {
+  color: #64748b;
+  margin-top: 6px;
+  margin-bottom: 36px;
+  font-size: 1rem;
+}
+
+/* --- PRODUCT GRID ------------------------------------------ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+
+/* --- PRODUCT CARD — style Amazon / Jumia -------------------- */
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* --- CARD IMAGE — fond clair Amazon/Jumia style ------------ */
+.card-image {
+  position: relative;
+  background: #f8f9fa;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 16px;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* --- BADGE — remise / stock en haut à gauche -------------- */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  color: #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.badge-promo {
+  background: #dc2626;
+}
+
+.badge-stock {
+  background: #16a34a;
+}
+
+/* --- CARD BODY --------------------------------------------- */
+.card-body {
+  padding: 16px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* --- Marque (comme sur Amazon/Jumia) ----------------------- */
+.card-brand {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+/* --- Titre produit ----------------------------------------- */
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+/* --- Description ------------------------------------------- */
+.card-desc {
+  font-size: 0.78rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  flex-grow: 0;
+}
+
+/* --- RATING (étoiles jaunes Amazon) ------------------------ */
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 0.95rem;
+  color: #dee2e6;
+  line-height: 1;
+  cursor: default;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.star.half {
+  position: relative;
+  color: #dee2e6;
+}
+
+.star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f59e0b;
+}
+
+.rating-count {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-left: 4px;
+}
+
+/* --- PRIX — large et gras comme Amazon/Jumia -------------- */
+.card-price {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.current-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.old-price {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* --- BOUTONS — style e-commerce ---------------------------- */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* — Bouton "Ajouter au panier" (orange Amazon / bleu Jumia) - */
+.btn-cart {
+  flex: 1;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-cart:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* — Bouton Favoris (cœur) ----------------------------------- */
+.btn-fav {
+  width: 42px;
+  padding: 10px 0;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 1.15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-fav:hover {
+  background: #fee2e2;
+  color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+/* ============================================================
+   SÉLECTEURS AVANCÉS (spécification)
+   ============================================================ */
+
+/* --- :nth-child — différenciation -------------------------- */
+.product-card:nth-child(2) .card-title::after {
+  content: " ★ Meilleure vente";
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #16a34a;
+  display: block;
+  margin-top: 2px;
+}
+
+.product-card:nth-child(3) {
+  border: 2px solid #f59e0b;
+}
+
+.product-card:nth-child(3) .card-body {
+  padding: 15px 16px 19px;
+}
+
+.product-card:nth-child(5) {
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08);
+}
+
+.product-card:nth-child(5):hover {
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.16);
+}
+
+.product-card:nth-child(6) .btn-cart {
+  background: #d97706;
+}
+
+.product-card:nth-child(6) .btn-cart:hover {
+  background: #b45309;
+  box-shadow: 0 4px 14px rgba(185, 83, 9, 0.35);
+}
+
+.product-card:nth-child(6):hover {
+  box-shadow: 0 12px 32px rgba(217, 119, 6, 0.12);
+}
+
+/* --- :first-child / :last-child dans les actions ----------- */
+.card-actions > .btn:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-actions > .btn:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* --- Sélecteur adjacent + --------------------------------- */
+.star.filled + .star {
+  margin-left: 1px;
+}
+
+.star + .rating-count {
+  margin-left: 6px;
+}
+
+/* --- Sélecteur général ~ ---------------------------------- */
+.btn-cart ~ .btn {
+  font-weight: 500;
+}
+
+/* --- Sélecteur d'attribut [data-category] ----------------- */
+.product-card[data-category="electronique"] .current-price {
+  color: #2563eb;
+}
+
+.product-card[data-category="vetements"] .current-price {
+  color: #dc2626;
+}
+
+.product-card[data-category="livres"] .current-price {
+  color: #b91c1c;
+}
+
+.product-card[data-category="nourriture"] .current-price {
+  color: #d97706;
+}
+
+/* --- Sélecteur d'attribut [data-discount] ----------------- */
+.product-card[data-discount] .badge-promo::after {
+  content: "";
+}
+
+.product-card[data-discount="17"] .badge-promo {
+  background: #dc2626;
+}
+
+.product-card[data-discount="20"] .badge-promo {
+  background: #d97706;
+}
+
+/* --- Sélecteur d'identifiant ------------------------------ */
+#card-phone {
+  border-top: 3px solid #2563eb;
+}
+
+#card-laptop {
+  border-top: 3px solid #0f172a;
+}
+
+#card-watch {
+  border-top: 3px solid #16a34a;
+}
+
+#card-clothing {
+  border-top: 3px solid #dc2626;
+}
+
+#card-book {
+  border-top: 3px solid #b91c1c;
+}
+
+#card-food {
+  border-top: 3px solid #d97706;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 20px 24px;
+  background: #0f172a;
+  color: #64748b;
+  font-size: 0.82rem;
+  margin-top: 48px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .catalogue {
+    padding: 24px 16px;
+  }
+
+  .catalogue h1 {
+    font-size: 1.4rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .topbar nav a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .product-card {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

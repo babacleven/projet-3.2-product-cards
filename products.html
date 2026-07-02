@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TechStore — Smartphones, PC, montres, vêtements, livres & cuisine congolaise aux meilleurs prix"
+    />
+    <title>TechStore — Cartes Produits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       TOPBAR — style Amazon/Jumia
+       ============================================================ -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a href="#" class="logo">TechStore</a>
+        <nav aria-label="Navigation site">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">Meilleures ventes</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="topbar-cart" aria-label="Panier">🛒</div>
+      </div>
+    </header>
+
+    <!-- ============================================================
+       MAIN — Grille de cartes produits
+       ============================================================ -->
+    <main>
+      <section class="catalogue" aria-labelledby="catalogue-title">
+        <div class="catalogue-inner">
+          <h1 id="catalogue-title">Nos meilleures offres</h1>
+          <p class="catalogue-sub">
+            Électronique, vêtements, livres &amp; cuisine congolaise — aux
+            meilleurs prix
+          </p>
+
+          <div class="product-grid">
+            <!-- ============================================================
+               CARTE 1 — Smartphone Pro X (Électronique)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-phone"
+              data-category="electronique"
+              data-discount="17"
+            >
+              <div class="card-image">
+                <img
+src="images/Smartphone Pro X.jpg"
+                   alt="Smartphone Pro X — écran AMOLED 6,7 pouces 256 Go"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-promo">-17%</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">TechStore</p>
+                <h2 class="card-title">Smartphone Pro X</h2>
+                <p class="card-desc">
+                  Écran AMOLED 6,7", 256 Go, appareil photo 108 Mpx, batterie
+                  5000 mAh, dual SIM 4G.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="4 étoiles et demie sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star half">★</span>
+                  <span class="rating-count">(128)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">749&nbsp;000&nbsp;FCFA</span>
+                  <span class="old-price">899&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================================
+               CARTE 2 — UltraBook Air (Électronique)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-laptop"
+              data-category="electronique"
+            >
+              <div class="card-image">
+                <img
+src="images/UltraBook Air.jpg"
+                   alt="UltraBook Air — PC portable Intel Core i7 16 Go RAM SSD 512 Go"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-stock">En stock</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">TechStore</p>
+                <h2 class="card-title">UltraBook Air</h2>
+                <p class="card-desc">
+                  Intel Core i7, 16 Go RAM, SSD 512 Go, écran 15,6" Full HD, 1,2
+                  kg, Windows 11.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="rating-count">(89)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">1&nbsp;249&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================================
+               CARTE 3 — Watch Sport 5 (Électronique)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-watch"
+              data-category="electronique"
+              data-discount="15"
+            >
+              <div class="card-image">
+                <img
+src="images/Watch Sport 5.jpg"
+                   alt="Watch Sport 5 — montre connectée GPS cardio SpO₂"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-promo">-15%</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">TechStore</p>
+                <h2 class="card-title">Watch Sport 5</h2>
+                <p class="card-desc">
+                  GPS, cardio, SpO₂, écran Always-On, batterie 18 jours, étanche
+                  5 ATM, iOS &amp; Android.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="4 étoiles sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star">★</span>
+                  <span class="rating-count">(256)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">299&nbsp;000&nbsp;FCFA</span>
+                  <span class="old-price">349&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================================
+               CARTE 4 — Pagne traditionnel Kuba (Vêtements)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-clothing"
+              data-category="vetements"
+            >
+              <div class="card-image">
+                <img
+src="images/istockphoto-2281937879-1024x1024.jpg"
+                   alt="Pagne traditionnel Kuba — tissu fait main aux motifs géométriques"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-stock">Nouveau</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">Artisanat Congo-Brazzaville</p>
+                <h2 class="card-title">Pagne traditionnel Kuba</h2>
+                <p class="card-desc">
+                  Tissu en raphia tissé à la main, motifs géométriques
+                  symboliques, teinture naturelle — 2 yards.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="rating-count">(47)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">45&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================================
+               CARTE 5 — Cuisine congolaise (Livre)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-book"
+              data-category="livres"
+              data-discount="10"
+            >
+              <div class="card-image">
+                <img
+src="images/Cuisine congolaise.jpg"
+                   alt="Cuisine congolaise — 50 recettes traditionnelles du Moambe au Fufu"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-promo">-10%</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">Éditions MNC</p>
+                <h2 class="card-title">Cuisine congolaise</h2>
+                <p class="card-desc">
+                  50 recettes traditionnelles du Moambe au Fufu — livre illustré
+                  avec photos et anecdotes culturelles.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="4 étoiles et demie sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star half">★</span>
+                  <span class="rating-count">(34)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">22&nbsp;500&nbsp;FCFA</span>
+                  <span class="old-price">25&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================================
+               CARTE 6 — Poulet Moambe (Nourriture)
+               ============================================================ -->
+            <article
+              class="product-card"
+              id="card-food"
+              data-category="nourriture"
+              data-discount="20"
+            >
+              <div class="card-image">
+                <img
+src="images/Poulet Moambe.jpg"
+                   alt="Poulet Moambe — plat traditionnel congolais sauce noix de palme"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <span class="badge badge-promo">-20%</span>
+              </div>
+              <div class="card-body">
+                <p class="card-brand">Congo Gourmet</p>
+                <h2 class="card-title">Poulet Moambe</h2>
+                <p class="card-desc">
+                  Poulet mijoté dans une sauce onctueuse à la noix de palme,
+                  servi avec riz blanc et plantains frits.
+                </p>
+                <div
+                  class="card-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="rating-count">(312)</span>
+                </div>
+                <div class="card-price">
+                  <span class="current-price">12&nbsp;000&nbsp;FCFA</span>
+                  <span class="old-price">15&nbsp;000&nbsp;FCFA</span>
+                </div>
+                <div class="card-actions">
+                  <button type="button" class="btn btn-cart">
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-fav"
+                    aria-label="Ajouter aux favoris"
+                  >
+                    ♡
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer class="footer">
+      <p>
+        <small
+          >&copy; 2026 TechStore — Cartes produits fictives réalisées en HTML5
+          &amp; CSS3.</small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
