@@ -142,12 +142,15 @@ main {
 /* --- PRODUCT GRID ------------------------------------------ */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
   gap: 24px;
 }
 
 /* --- PRODUCT CARD — style Amazon / Jumia -------------------- */
 .product-card {
+  width: 300px;
+  height: 400px;
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -169,7 +172,8 @@ main {
 .card-image {
   position: relative;
   background: #f8f9fa;
-  aspect-ratio: 1 / 1;
+  height: 180px;
+  flex-shrink: 0;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -180,7 +184,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 16px;
   transition: transform 0.35s ease;
 }
 
@@ -289,7 +292,7 @@ main {
 
 /* --- PRIX — large et gras comme Amazon/Jumia -------------- */
 .card-price {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -374,7 +377,7 @@ main {
 
 /* --- :nth-child — différenciation -------------------------- */
 .product-card:nth-child(2) .card-title::after {
-  content: " ★ Meilleure vente";
+  content: " ★ Vente";
   font-size: 0.7rem;
   font-weight: 500;
   color: #16a34a;
@@ -526,7 +529,6 @@ main {
   }
 
   .product-card {
-    max-width: 360px;
     margin: 0 auto;
   }
 }
