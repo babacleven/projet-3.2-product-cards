@@ -1,11 +1,11 @@
-# PROJET 3.2 - Carte Produit Stylisee
+# PROJET 3.2 - Cartes Produits
 
 Niveau : Intermediaire  
-Technologies : HTML5 + CSS3 externe (feuille de style unique)
+Technologies : HTML5 + CSS3 externe
 
 ## Description
 
-Page de presentation de produits inspiree du style Amazon / Jumia avec 6 cartes produits reparties en 4 categories. Chaque carte affiche une image, un titre, une description, un prix, des etoiles de notation, des badges (Promo / En stock), et des boutons d'action.
+Page de presentation de produits inspiree du style Amazon / Jumia avec 6 cartes produits (300×400 px). Chaque carte affiche une image, un titre, une description, un prix, des etoiles de notation, des badges (Promo / En stock / Nouveau), et des boutons d'action.
 
 ## Installation
 
@@ -17,96 +17,69 @@ Page de presentation de produits inspiree du style Amazon / Jumia avec 6 cartes 
 
 Aucune dependance ni serveur requis.
 
-## Utilisation
+## Contenu
 
-La page affiche une grille de 6 cartes produit :
+| # | Produit | Categorie | Prix |
+|---|---------|-----------|------|
+| 1 | Smartphone Pro X | Electronique | 749 000 FCFA |
+| 2 | UltraBook Air | Electronique | 1 249 000 FCFA |
+| 3 | Watch Sport 5 | Electronique | 299 000 FCFA |
+| 4 | Pagne traditionnel | Vetements | 45 000 FCFA |
+| 5 | Cuisine congolaise | Livres | 22 500 FCFA |
+| 6 | Poulet Moambe | Nourriture | 12 000 FCFA |
 
-- Smartphone Pro X (Electronique)
-- UltraBook Air (Electronique)
-- Watch Sport 5 (Electronique)
-- Pagne Kuba (Vetements)
-- Livre Cuisine (Livres)
-- Poulet Moambe (Nourriture)
+Chaque carte propose :
+- **Ajouter au panier**
+- **Ajouter aux favoris**
 
-Chaque carte propose les actions suivantes :
-- Ajouter au panier
-- Ajouter aux favoris
-
-Un survol (hover) agrandit la carte et anime les badges.
-
-## Structure du projet
+## Structure
 
 ```
 products.html
 styles.css
 images/
-    Smartphone Pro X.jpg
-    UltraBook Air.jpg
-    Watch Sport 5.jpg
+    smartphone-pro-x.jpg
+    ultrabook-air.jpg
+    watch-sport-5.jpg
     istockphoto-2281937879-1024x1024.jpg
-    Cuisine congolaise.jpg
-    Poulet Moambe.jpg
+    cuisine-congolaise.jpg
+    poulet-moambe.jpg
 ```
 
-## Design et CSS
+## Design
 
-### Palette couleurs (4 couleurs max)
+### Palette (4 couleurs)
 
-| Usage       | Couleur     |
-|-------------|-------------|
-| Primaire    | #1a73e8     |
-| Secondaire  | #ff6f00     |
-| Fond        | #f5f5f5     |
-| Texte       | #222        |
-
-### Caracteristiques CSS
-
-- Cartes 300x400 px avec border-radius et box-shadow
-- Transition transform scale(1.05) au survol
-- Badges Promo (rouge) et En stock (vert) en position absolue
-- Notation par etoiles (★)
-- Boutons Ajouter au panier et Favoris
-- Badge de categorie en haut de chaque carte
+| Usage | Couleur |
+|-------|---------|
+| Primaire | #2563eb |
+| Secondaire | #f59e0b |
+| Fond | #e9ecef |
+| Texte | #1e293b |
 
 ### Selecteurs CSS avances
 
-| Selecteur          | Usage                                    |
-|--------------------|------------------------------------------|
-| :hover             | Agrandissement carte, rotation badge     |
-| :nth-child(n)      | Alternance de categories                 |
-| >                  | Ciblage direct des enfants de .card      |
-| +                  | Espacement entre les etoiles             |
-| ~                  | Mise en forme des etoiles adjacentes     |
-| [data-]            | Badge categorie via data-category        |
-| #id                | Style unique pour le footer              |
+:first-child / :last-child, :nth-child, :hover, >, +, ~, [data-category], [data-discount], [id]
 
 ### Responsive
 
-- >= 1024px : grille 3-4 colonnes
-- 768px - 1023px : grille 2 colonnes
-- <= 767px : 1 colonne centree
+- ≥ 1025px : grille multi-colonnes (auto-fill 300px)
+- 641-1024px : 2 colonnes
+- ≤ 640px : 1 colonne centree
 
 ### Google Fonts
 
-- Inter (corps de texte)
-- Playfair Display (titres)
+- Inter (corps)
+- Playfair Display (titres, logo)
 
-## Technologies utilisees
+## Modifications effectuees
 
-- HTML5
-- CSS3 (feuille externe unique)
-- Google Fonts
-
-## Conformite PROJET 3.2
-
-- HTML5 + CSS3 externe uniquement
-- 6 cartes produits (3 requis minimum)
-- Dimensions 300x400 px
-- box-shadow, border-radius, transition, transform
-- Badges Promo et En stock
-- Etoiles de notation
-- Boutons Ajouter au panier et Favoris
-- Google Fonts (Inter + Playfair Display)
-- Palette max 4 couleurs
-- Selecteurs avances : :hover, :nth-child, >, +, ~, [data-], #id
-- Design responsive (3 breakpoints)
+| Erreur | Correction |
+|--------|------------|
+| Cartes responsives | Dimensions fixes 300×400 px |
+| Slashs finaux `/>` sur elements voids | Remplacement par `>` (HTML5) |
+| `aria-label` sur `<div>` sans role | Ajout `role="button" tabindex="0"` |
+| Espaces dans noms de fichiers images | Renommage (ex: `smartphone-pro-x.jpg`) |
+| Image "Poulet roti.jpg" inexistante | Remplacement par `poulet-moambe.jpg` |
+| Texte "Meilleure vente" | Renommage en "Vente" |
+| Boutons coupes par overflow | Image 160px + description tronquee 2 lignes |
